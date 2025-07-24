@@ -4,11 +4,11 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const categories = [
-    { id: 1, name: "🧩 Логические задачи", color: "bg-dusty", count: 12 },
-    { id: 2, name: "🎨 Творческие задания", color: "bg-olive", count: 8 },
-    { id: 3, name: "🔢 Математика", color: "bg-stone", count: 15 },
-    { id: 4, name: "😊 Хорошее настроение", color: "bg-dusty", count: 20 },
-    { id: 5, name: "🎭 Игры и развлечения", color: "bg-olive", count: 10 }
+    { id: 1, name: "🧩 Логические задачи", count: 12 },
+    { id: 2, name: "🎨 Творческие задания", count: 8 },
+    { id: 3, name: "🔢 Математика", count: 15 },
+    { id: 4, name: "😊 Хорошее настроение", count: 20 },
+    { id: 5, name: "🎭 Игры и развлечения", count: 10 }
   ];
 
   const featuredTasks = [
@@ -19,7 +19,7 @@ const Index = () => {
       difficulty: "Легко",
       time: "10 мин",
       category: "🎨 Творческие",
-      color: "bg-dusty"
+      category: "🎨 Творческие"
     },
     {
       id: 2,
@@ -27,8 +27,7 @@ const Index = () => {
       description: "Реши примеры и найди выход из лабиринта",
       difficulty: "Средне",
       time: "15 мин", 
-      category: "🔢 Математика",
-      color: "bg-olive"
+      category: "🔢 Математика"
     },
     {
       id: 3,
@@ -36,28 +35,27 @@ const Index = () => {
       description: "Сделай что-то хорошее и поделись с друзьями!",
       difficulty: "Легко",
       time: "5 мин",
-      category: "😊 Настроение",
-      color: "bg-stone"
+      category: "😊 Настроение"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-charcoal font-minecraft">
+    <div className="min-h-screen bg-mc-dark font-minecraft text-mc-light">
       {/* Header */}
-      <header className="border-b-4 border-charcoal p-4 shadow-pixel bg-transparent">
-        <div className="max-w-7xl mx-auto flex justify-between items-center bg-[#05050500]">
+      <header className="bg-mc-dark border-b-4 border-mc-light p-4 shadow-pixel">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 border-2 border-charcoal animate-pixel-bounce bg-[#cbadfb] rounded-full"></div>
-            <h1 className="text-2xl font-bold text-[#ffffff]">улыбашка.ру</h1>
+            <div className="w-8 h-8 bg-mc-accent border-2 border-mc-light animate-pixel-bounce"></div>
+            <h1 className="text-2xl font-bold text-mc-light">КубЗадания</h1>
           </div>
           <div className="flex items-center space-x-4">
             <Button 
-              className="bg-dusty hover:bg-dusty/80 text-charcoal border-2 border-charcoal shadow-pixel font-minecraft px-6"
+              className="bg-mc-success hover:bg-mc-success/80 text-mc-dark border-2 border-mc-light shadow-pixel font-minecraft px-6"
             >
               Войти
             </Button>
             <Button 
-              className="bg-olive hover:bg-olive/80 text-white border-2 border-charcoal shadow-pixel font-minecraft px-6"
+              className="bg-mc-accent hover:bg-mc-accent/80 text-mc-light border-2 border-mc-light shadow-pixel font-minecraft px-6"
             >
               Регистрация
             </Button>
@@ -65,20 +63,22 @@ const Index = () => {
         </div>
       </header>
 
-      <div className="flex max-w-7xl mx-auto bg-[#ffffff00]">
+      <div className="flex max-w-7xl mx-auto">
         {/* Sidebar */}
-        <aside className="w-80 bg-stone min-h-screen border-r-4 border-charcoal p-6 px-[30px] py-[25px] mx-0 my-0 rounded-3xl">
-          <h2 className="text-xl font-bold text-charcoal mb-6 border-b-2 border-charcoal pb-2"></h2>
+        <aside className="w-80 bg-mc-dark min-h-screen border-r-4 border-mc-light p-6">
+          <h2 className="text-xl font-bold text-mc-light mb-6 border-b-2 border-mc-light pb-2">
+            📚 Категории заданий
+          </h2>
           <div className="space-y-4">
             {categories.map(category => (
               <Card 
                 key={category.id} 
-                className={`${category.color} border-2 border-charcoal shadow-pixel hover:shadow-lg transition-all cursor-pointer hover:scale-105`}
+                className="bg-mc-dark border-2 border-mc-light shadow-pixel hover:shadow-lg transition-all cursor-pointer hover:scale-105 hover:bg-mc-light hover:text-mc-dark"
               >
                 <CardContent className="p-4">
                   <div className="flex justify-between items-center">
-                    <span className="font-bold text-charcoal text-sm">{category.name}</span>
-                    <span className="bg-charcoal text-white px-2 py-1 rounded-pixel text-xs">
+                    <span className="font-bold text-sm">{category.name}</span>
+                    <span className="bg-mc-accent text-mc-light px-2 py-1 rounded-pixel text-xs border border-mc-light">
                       {category.count}
                     </span>
                   </div>
@@ -87,31 +87,31 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="mt-8 p-4 bg-olive border-2 border-charcoal rounded-lg shadow-pixel">
-            <h3 className="font-bold text-white mb-2">🏆 Твой прогресс</h3>
-            <div className="space-y-2 text-white text-sm">
+          <div className="mt-8 p-4 bg-mc-dark border-2 border-mc-accent rounded-lg shadow-pixel">
+            <h3 className="font-bold text-mc-accent mb-2">🏆 Твой прогресс</h3>
+            <div className="space-y-2 text-mc-light text-sm">
               <div>Выполнено: 23 задания</div>
               <div>Очки: 1,250 ⭐</div>
-              <div className="w-full bg-charcoal rounded-pixel h-2">
-                <div className="bg-dusty h-2 rounded-pixel w-3/4"></div>
+              <div className="w-full bg-mc-light rounded-pixel h-2">
+                <div className="bg-mc-success h-2 rounded-pixel w-3/4"></div>
               </div>
             </div>
           </div>
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-6 bg-stone px-10 rounded-3xl">
+        <main className="flex-1 p-6 bg-mc-dark">
           {/* Hero Section */}
-          <div className="border-4 border-charcoal p-8 mb-8 shadow-pixel bg-[#9e83cbc2] rounded-full">
+          <div className="bg-mc-dark border-4 border-mc-light rounded-lg p-8 mb-8 shadow-pixel">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-charcoal mb-4">
+              <h1 className="text-4xl font-bold text-mc-light mb-4">
                 Добро пожаловать в мир заданий! 🎮
               </h1>
-              <p className="text-xl text-charcoal/80 mb-6">
+              <p className="text-xl text-mc-light/80 mb-6">
                 Решай задачки, развивайся и поднимай настроение вместе с нами!
               </p>
               <Button 
-                className="bg-olive hover:bg-olive/80 text-white border-2 border-charcoal shadow-pixel font-minecraft px-8 py-3 text-lg"
+                className="bg-mc-success hover:bg-mc-success/80 text-mc-dark border-2 border-mc-light shadow-pixel font-minecraft px-8 py-3 text-lg"
               >
                 Начать приключение! 🚀
               </Button>
@@ -120,34 +120,34 @@ const Index = () => {
 
           {/* Featured Tasks */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-charcoal mb-6 flex items-center">
-              <Icon name="Star" className="mr-2 text-olive" />
+            <h2 className="text-2xl font-bold text-mc-light mb-6 flex items-center">
+              <Icon name="Star" className="mr-2 text-mc-warning" />
               Популярные задания
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredTasks.map(task => (
                 <Card 
                   key={task.id}
-                  className={`${task.color} border-2 border-charcoal shadow-pixel hover:shadow-lg transition-all cursor-pointer hover:scale-105`}
+                  className="bg-mc-dark border-2 border-mc-light shadow-pixel hover:shadow-lg transition-all cursor-pointer hover:scale-105 hover:border-mc-accent"
                 >
                   <CardHeader>
-                    <CardTitle className="text-charcoal text-lg">{task.title}</CardTitle>
+                    <CardTitle className="text-mc-light text-lg">{task.title}</CardTitle>
                     <div className="flex gap-2">
-                      <span className="bg-charcoal text-white px-2 py-1 rounded-pixel text-xs">
+                      <span className="bg-mc-success text-mc-dark px-2 py-1 rounded-pixel text-xs border border-mc-light">
                         {task.difficulty}
                       </span>
-                      <span className="bg-charcoal text-white px-2 py-1 rounded-pixel text-xs">
+                      <span className="bg-mc-warning text-mc-dark px-2 py-1 rounded-pixel text-xs border border-mc-light">
                         {task.time}
                       </span>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-charcoal/80 text-sm mb-3">{task.description}</p>
+                    <p className="text-mc-light/80 text-sm mb-3">{task.description}</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-xs text-charcoal/60">{task.category}</span>
+                      <span className="text-xs text-mc-light/60">{task.category}</span>
                       <Button 
                         size="sm" 
-                        className="bg-charcoal hover:bg-charcoal/80 text-white border border-charcoal shadow-pixel"
+                        className="bg-mc-accent hover:bg-mc-accent/80 text-mc-light border border-mc-light shadow-pixel"
                       >
                         Играть
                       </Button>
@@ -160,28 +160,28 @@ const Index = () => {
 
           {/* Stats Section */}
           <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <Card className="bg-olive border-2 border-charcoal shadow-pixel">
+            <Card className="bg-mc-dark border-2 border-mc-success shadow-pixel">
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-white">145</div>
-                <div className="text-white/80 text-sm">Всего заданий</div>
+                <div className="text-2xl font-bold text-mc-success">145</div>
+                <div className="text-mc-light/80 text-sm">Всего заданий</div>
               </CardContent>
             </Card>
-            <Card className="bg-dusty border-2 border-charcoal shadow-pixel">
+            <Card className="bg-mc-dark border-2 border-mc-accent shadow-pixel">
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-charcoal">1,234</div>
-                <div className="text-charcoal/80 text-sm">Активных игроков</div>
+                <div className="text-2xl font-bold text-mc-accent">1,234</div>
+                <div className="text-mc-light/80 text-sm">Активных игроков</div>
               </CardContent>
             </Card>
-            <Card className="bg-stone border-2 border-charcoal shadow-pixel">
+            <Card className="bg-mc-dark border-2 border-mc-warning shadow-pixel">
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-charcoal">★ 4.9</div>
-                <div className="text-charcoal/80 text-sm">Рейтинг</div>
+                <div className="text-2xl font-bold text-mc-warning">★ 4.9</div>
+                <div className="text-mc-light/80 text-sm">Рейтинг</div>
               </CardContent>
             </Card>
-            <Card className="bg-olive border-2 border-charcoal shadow-pixel">
+            <Card className="bg-mc-dark border-2 border-mc-danger shadow-pixel">
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-white">🏆 23</div>
-                <div className="text-white/80 text-sm">Твои достижения</div>
+                <div className="text-2xl font-bold text-mc-danger">🏆 23</div>
+                <div className="text-mc-light/80 text-sm">Твои достижения</div>
               </CardContent>
             </Card>
           </section>

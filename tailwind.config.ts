@@ -19,11 +19,13 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Minecraft-inspired color scheme
-				stone: '#E0E0D4',
-				dusty: '#F295A0', 
-				charcoal: '#272A2A',
-				olive: '#989C14',
+				// Minecraft dark theme
+				'mc-dark': '#272A2A',
+				'mc-light': '#E0E0D4',
+				'mc-accent': '#5555FF',
+				'mc-success': '#55FF55',
+				'mc-warning': '#FFFF55',
+				'mc-danger': '#FF5555',
 				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -70,7 +72,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				minecraft: ['"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+				minecraft: ['"VT323"', '"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
