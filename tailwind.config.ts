@@ -72,7 +72,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				minecraft: ['"Minecraft Rus"', '"MinecraftRus"', '"VT323"', '"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+				minecraft: ['"Minecraft Rus"', '"MinecraftRus"', '"minecraft-rus"', '"VT323"', '"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+				'DEFAULT': ['"Minecraft Rus"', '"MinecraftRus"', '"minecraft-rus"', '"VT323"', '"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

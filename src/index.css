@@ -1,4 +1,5 @@
-@import url("https://fonts.cdnfonts.com/css/minecraft-rus");
+@import url("https://fonts-online.ru/fonts/minecraft-rus");
+@import url("https://db.onlinewebfonts.com/c/2707843d7c72c4235e2bb0b3e7d4c685?family=Minecraft+Rus");
 
 @tailwind base;
 @tailwind components;
@@ -103,8 +104,11 @@
 }
 
 /* Minecraft Russian font optimization */
-.minecraft-text {
-  font-family: "Minecraft Rus", "VT323", "Press Start 2P", monospace !important;
+.minecraft-text,
+* {
+  font-family:
+    "Minecraft Rus", "MinecraftRus", "minecraft-rus", "VT323", "Press Start 2P",
+    monospace !important;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: none;
@@ -112,4 +116,27 @@
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+}
+
+/* Принудительно применяем шрифт ко всем элементам */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+textarea,
+select,
+option {
+  font-family:
+    "Minecraft Rus", "MinecraftRus", "minecraft-rus", "VT323", "Press Start 2P",
+    monospace !important;
 }

@@ -1,15 +1,26 @@
 @font-face {
   font-family: 'Minecraft Rus';
-  src: url('https://fonts.cdnfonts.com/css/minecraft-rus') format('woff2'),
-       url('https://fonts.cdnfonts.com/css/minecraft-rus') format('woff');
+  src: url('https://fonts-online.ru/fonts/minecraft-rus.woff2') format('woff2'),
+       url('https://fonts-online.ru/fonts/minecraft-rus.woff') format('woff'),
+       url('https://db.onlinewebfonts.com/t/2707843d7c72c4235e2bb0b3e7d4c685.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/2707843d7c72c4235e2bb0b3e7d4c685.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-/* Fallback для пиксельного стиля */
-.minecraft-text {
-  font-family: 'Minecraft Rus', 'VT323', 'Press Start 2P', monospace;
+@font-face {
+  font-family: 'MinecraftRus';
+  src: url('https://db.onlinewebfonts.com/t/2707843d7c72c4235e2bb0b3e7d4c685.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/2707843d7c72c4235e2bb0b3e7d4c685.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Принудительное применение ко всем элементам */
+* {
+  font-family: 'Minecraft Rus', 'MinecraftRus', 'VT323', 'Press Start 2P', monospace !important;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: none;
