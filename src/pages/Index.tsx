@@ -45,7 +45,7 @@ const Index = () => {
     <div className="min-h-screen bg-charcoal font-minecraft">
       {/* Header */}
       <header className="border-b-4 border-charcoal p-4 shadow-pixel bg-transparent">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-7xl mx-auto flex justify-between items-center bg-[#05050500]">
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 border-2 border-charcoal animate-pixel-bounce bg-[#cbadfb] rounded-full"></div>
             <h1 className="text-2xl font-bold text-[#ffffff]">улыбашка.ру</h1>
@@ -68,9 +68,7 @@ const Index = () => {
       <div className="flex max-w-7xl mx-auto bg-[#ffffff00]">
         {/* Sidebar */}
         <aside className="w-80 bg-stone min-h-screen border-r-4 border-charcoal p-6 px-[30px] py-[25px] mx-0 my-0 rounded-3xl">
-          <h2 className="text-xl font-bold text-charcoal mb-6 border-b-2 border-charcoal pb-2">
-            📚 Категории заданий
-          </h2>
+          <h2 className="text-xl font-bold text-charcoal mb-6 border-b-2 border-charcoal pb-2"></h2>
           <div className="space-y-4">
             {categories.map(category => (
               <Card 
@@ -102,9 +100,9 @@ const Index = () => {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-6 bg-stone px-10 rounded-full">
+        <main className="flex-1 p-6 bg-stone px-10 rounded-3xl">
           {/* Hero Section */}
-          <div className="border-4 border-charcoal p-8 mb-8 shadow-pixel bg-[#9e83cbc2] rounded-3xl">
+          <div className="border-4 border-charcoal p-8 mb-8 shadow-pixel bg-[#9e83cbc2] rounded-full">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-charcoal mb-4">
                 Добро пожаловать в мир заданий! 🎮
