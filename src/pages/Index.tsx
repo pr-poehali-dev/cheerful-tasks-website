@@ -104,9 +104,7 @@ const Index = () => {
           {/* Hero Section */}
           <div className="bg-mc-dark border-4 border-mc-light rounded-lg p-8 mb-8 shadow-pixel">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-mc-light mb-4">
-                Добро пожаловать в мир заданий! 🎮
-              </h1>
+              <h1 className="text-4xl font-bold text-mc-light mb-4">щалалаща</h1>
               <p className="text-xl text-mc-light/80 mb-6">
                 Решай задачки, развивайся и поднимай настроение вместе с нами!
               </p>
