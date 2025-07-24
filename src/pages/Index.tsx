@@ -104,7 +104,7 @@ const Index = () => {
         {/* Main Content */}
         <main className="flex-1 p-6 bg-stone px-10 rounded-full">
           {/* Hero Section */}
-          <div className="border-4 border-charcoal p-8 mb-8 shadow-pixel rounded-full bg-[#9e83cbc2]">
+          <div className="border-4 border-charcoal p-8 mb-8 shadow-pixel bg-[#9e83cbc2] rounded-3xl">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-charcoal mb-4">
                 Добро пожаловать в мир заданий! 🎮
