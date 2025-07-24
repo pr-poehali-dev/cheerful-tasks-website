@@ -19,6 +19,12 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Minecraft-inspired color scheme
+				stone: '#E0E0D4',
+				dusty: '#F295A0', 
+				charcoal: '#272A2A',
+				olive: '#989C14',
+				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -63,10 +69,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				minecraft: ['"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				pixel: '2px',
+			},
+			boxShadow: {
+				pixel: '3px 3px 0px 0px rgba(0,0,0,0.3)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +97,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pixel-bounce': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-4px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pixel-bounce': 'pixel-bounce 1s ease-in-out infinite'
 			}
 		}
 	},
