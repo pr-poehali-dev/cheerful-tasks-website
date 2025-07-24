@@ -40,7 +40,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-mc-dark font-minecraft text-mc-light">
+    <div className="min-h-screen bg-mc-dark font-minecraft text-mc-light minecraft-text">
       {/* Header */}
       <header className="bg-mc-dark border-b-4 border-mc-light p-4 shadow-pixel">
         <div className="max-w-7xl mx-auto flex justify-between items-center">

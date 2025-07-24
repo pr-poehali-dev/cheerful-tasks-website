@@ -72,7 +72,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				minecraft: ['"VT323"', '"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+				minecraft: ['"Minecraft Rus"', '"MinecraftRus"', '"VT323"', '"Press Start 2P"', 'Monaco', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
