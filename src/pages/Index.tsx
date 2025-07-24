@@ -65,7 +65,7 @@ const Index = () => {
         </div>
       </header>
 
-      <div className="flex max-w-7xl mx-auto">
+      <div className="flex max-w-7xl mx-auto bg-[#ffffff00]">
         {/* Sidebar */}
         <aside className="w-80 bg-stone min-h-screen border-r-4 border-charcoal p-6 px-[30px] py-[25px] mx-0 my-0 rounded-3xl">
           <h2 className="text-xl font-bold text-charcoal mb-6 border-b-2 border-charcoal pb-2">
@@ -104,7 +104,7 @@ const Index = () => {
         {/* Main Content */}
         <main className="flex-1 p-6 bg-stone px-10 rounded-full">
           {/* Hero Section */}
-          <div className="bg-dusty border-4 border-charcoal rounded-lg p-8 mb-8 shadow-pixel">
+          <div className="border-4 border-charcoal p-8 mb-8 shadow-pixel rounded-full bg-[#9e83cbc2]">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-charcoal mb-4">
                 Добро пожаловать в мир заданий! 🎮
